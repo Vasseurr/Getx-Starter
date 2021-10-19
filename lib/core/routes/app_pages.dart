@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:getx_starter/core/pages/login_page.dart';
 import 'package:getx_starter/core/routes/app_routes.dart';
 import 'package:getx_starter/home/bindings/home_binding.dart';
 import 'package:getx_starter/home/ui/home_page.dart';
@@ -8,7 +9,7 @@ class AppPages {
   static final pages = [
     GetPage(
         name: Routes.INITIAL,
-        page: () => const HomePage(),
+        page: () => const LoginPage(),
         binding: HomeBinding()),
     GetPage(
         name: Routes.SECOND,
