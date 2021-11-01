@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:getx_starter/core/components/buttons/custom_button.dart';
 import 'package:getx_starter/core/components/text/text_form_field.dart';
-import 'package:getx_starter/core/constants/colors.dart';
 import 'package:getx_starter/core/extension/context_extension.dart';
 
 class LoginPage extends StatefulWidget {
