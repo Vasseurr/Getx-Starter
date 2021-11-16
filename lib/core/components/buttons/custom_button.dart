@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class RuzgarButton extends StatelessWidget {
@@ -8,7 +10,7 @@ class RuzgarButton extends StatelessWidget {
   final double radius;
   final double height;
   final double width;
-  // final Widget buttonIcon;
+  final Widget? buttonIcon;
   final VoidCallback onPressed;
   final Color color;
   final FontWeight fontWeight;
@@ -23,7 +25,7 @@ class RuzgarButton extends StatelessWidget {
       this.radius = 10,
       this.height = 40,
       this.width = 100,
-      Widget? buttonIcon,
+      this.buttonIcon,
       required this.onPressed,
       this.color = Colors.blue,
       this.fontWeight = FontWeight.w500,
@@ -50,7 +52,7 @@ class RuzgarButton extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(),
+              buttonIcon != null ? Expanded(child: buttonIcon!) : SizedBox(),
               Expanded(
                 child: Center(
                   child: Text(
@@ -62,7 +64,6 @@ class RuzgarButton extends StatelessWidget {
                   ),
                 ),
               ),
-              Container()
             ],
           ),
           onPressed: onPressed,

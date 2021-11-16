@@ -1,6 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_starter/core/components/buttons/custom_button.dart';
+import 'package:getx_starter/core/components/buttons/facebook_button.dart';
+import 'package:getx_starter/core/components/buttons/google_button.dart';
 import 'package:getx_starter/core/extension/context_extension.dart';
 import 'package:getx_starter/core/routes/app_routes.dart';
 import 'package:getx_starter/home/controller/home_controller.dart';
@@ -49,7 +53,9 @@ class HomePage extends GetView<HomeController> {
                     buttonText: "Go to Second Page",
                     onPressed: () {
                       Get.toNamed(Routes.SECOND);
-                    })
+                    }),
+                Google(),
+                Facebook(),
               ],
             );
           },

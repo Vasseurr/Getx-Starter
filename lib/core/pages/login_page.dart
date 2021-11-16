@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -18,25 +20,30 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent[400],
       body: Container(
-        height: context.getHeight,
-        margin: context.marginWidthHigh,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            header(context),
-            email(),
-            spacer(context, 0.03, 1),
-            password(),
-            spacer(context, 0.015, 1),
-            forgotPassword(),
-            remember(context),
-            spacer(context, 0.025, 1),
-            buttons(context),
-            spacer(context, 0.02, 1),
-            signUp(context)
-          ],
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage("assets/images/background.jpg"),
+          fit: BoxFit.cover,
+        )),
+        child: Container(
+          margin: context.marginWidthHigh,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              header(context),
+              email(),
+              spacer(context, 0.03, 1),
+              password(),
+              spacer(context, 0.015, 1),
+              forgotPassword(),
+              remember(context),
+              spacer(context, 0.025, 1),
+              buttons(context),
+              spacer(context, 0.02, 1),
+              signUp(context)
+            ],
+          ),
         ),
       ),
     );
