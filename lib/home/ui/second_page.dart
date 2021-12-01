@@ -23,7 +23,7 @@ class SecondPage extends StatelessWidget {
               // child: Text(homeController.getFromHiveManager()),
             ),
             const Spacer(),
-            RuzgarButton(
+            VasseurrBttn(
                 buttonText: "Change value",
                 onPressed: () {
                   homeController.changeValue();

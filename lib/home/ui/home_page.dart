@@ -40,13 +40,13 @@ class HomePage extends GetView<HomeController> {
                       _.saveUser();
                     }),
                 const Spacer(),*/
-                RuzgarButton(
+                VasseurrBttn(
                     buttonText: "Save value",
                     onPressed: () async {
                       _.saveUser();
                     }),
                 const Spacer(),
-                RuzgarButton(
+                VasseurrBttn(
                     height: context.height * 0.08,
                     width: context.width * 0.4,
                     radius: 15,

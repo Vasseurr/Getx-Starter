@@ -12,7 +12,7 @@ class Facebook extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RuzgarButton(
+    return VasseurrBttn(
       height: context.getHeight * 0.05,
       width: context.getWidth * 0.35,
       buttonText: "Facebook",
