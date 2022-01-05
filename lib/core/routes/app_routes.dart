@@ -4,4 +4,5 @@ abstract class Routes {
   static const SECOND = '/second';
   static const FAVOURITE = '/favourite';
   static const MAIL = '/mail';
+  static const REGISTER = '/register';
 }
