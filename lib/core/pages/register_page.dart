@@ -3,33 +3,97 @@ import 'package:flutter/services.dart';
 import 'package:getx_starter/core/components/buttons/custom_button.dart';
 import 'package:getx_starter/core/components/text/text_form_field.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
 
   @override
+  _RegisterPageState createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
+  Color primary = Colors.blueAccent.shade400;
+  Color secondary = Colors.blueAccent.shade100;
+  bool isLogin = false;
+
+  @override
   Widget build(BuildContext context) {
-    Color primary = Colors.blueAccent.shade400;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          header(primary, context),
-          const SizedBox(height: 15),
-          textField("Fullname", const Icon(Icons.person), context),
-          textField("Email", const Icon(Icons.email), context),
-          textField("Phone Number", const Icon(Icons.phone), context),
-          textField("Password", const Icon(Icons.vpn_key), context),
+          header(context),
+          const SizedBox(height: 20),
+          options(),
+          const SizedBox(height: 20),
+          isLogin == true ? loginTFF(context) : registerTFF(context),
           const SizedBox(height: 30),
-          registerButton(primary, context),
-          const SizedBox(height: 30),
-          loginButton(primary)
+          isLogin == true
+              ? button("LOGIN", context)
+              : button("REGISTER", context),
+          //const SizedBox(height: 30),
+          // loginButton(primary)
         ],
       ),
     );
   }
 
-  Row loginButton(Color primary) {
+  Column registerTFF(BuildContext context) {
+    return Column(
+      children: [
+        textField("Fullname", const Icon(Icons.person), context),
+        textField("Email", const Icon(Icons.email), context),
+        textField("Phone Number", const Icon(Icons.phone), context),
+        textField("Password", const Icon(Icons.vpn_key), context),
+      ],
+    );
+  }
+
+  Column loginTFF(BuildContext context) {
+    return Column(
+      children: [
+        textField("Email", const Icon(Icons.email), context),
+        textField("Password", const Icon(Icons.vpn_key), context),
+      ],
+    );
+  }
+
+  Row options() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        InkWell(
+          onTap: () {
+            setState(() {
+              isLogin = false;
+            });
+          },
+          child: Text("Sign Up",
+              style: TextStyle(
+                  color: isLogin == false ? primary : secondary,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16)),
+        ),
+        const SizedBox(
+          width: 20,
+        ),
+        InkWell(
+          onTap: () {
+            setState(() {
+              isLogin = true;
+            });
+          },
+          child: Text("Sign In",
+              style: TextStyle(
+                  color: isLogin == true ? primary : secondary,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16)),
+        ),
+      ],
+    );
+  }
+
+  Row loginButton() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -42,7 +106,7 @@ class RegisterPage extends StatelessWidget {
     );
   }
 
-  VasseurrBttn registerButton(Color primary, BuildContext context) {
+  VasseurrBttn button(String text, BuildContext context) {
     return VasseurrBttn(
         width: MediaQuery.of(context).size.width * 0.8,
         radius: 20,
@@ -50,7 +114,7 @@ class RegisterPage extends StatelessWidget {
         fontSize: 18,
         buttonColor: primary,
         borderColor: Colors.white,
-        buttonText: "REGISTER",
+        buttonText: text,
         onPressed: () {});
   }
 
@@ -79,7 +143,7 @@ class RegisterPage extends StatelessWidget {
     );
   }
 
-  Container header(Color primary, BuildContext context) {
+  Container header(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.35,
       width: MediaQuery.of(context).size.width,

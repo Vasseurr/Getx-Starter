@@ -32,7 +32,7 @@ class AppPages {
         binding: HomeBinding()),
     GetPage(
         name: Routes.REGISTER,
-        page: () => const RegisterPage(),
+        page: () => RegisterPage(),
         binding: HomeBinding()),
   ];
 }
