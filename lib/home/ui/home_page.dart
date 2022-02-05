@@ -5,7 +5,10 @@ import 'package:get/get.dart';
 import 'package:getx_starter/core/components/buttons/custom_button.dart';
 import 'package:getx_starter/core/components/buttons/facebook_button.dart';
 import 'package:getx_starter/core/components/buttons/google_button.dart';
+import 'package:getx_starter/core/components/utils/utils.dart';
+import 'package:getx_starter/core/constants/hive_keys.dart';
 import 'package:getx_starter/core/extension/context_extension.dart';
+import 'package:getx_starter/core/init/cache/hive_manager.dart';
 import 'package:getx_starter/core/routes/app_routes.dart';
 import 'package:getx_starter/home/controller/home_controller.dart';
 
@@ -44,6 +47,10 @@ class HomePage extends GetView<HomeController> {
                     buttonText: "Save value",
                     onPressed: () async {
                       _.saveUser();
+                      Utils.instance.showSnackBar(context,
+                          content: HiveManager.instance
+                                  .getStringValue(HiveKeys.USERNAME) ??
+                              " ");
                     }),
                 const Spacer(),
                 VasseurrBttn(
