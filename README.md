@@ -18,4 +18,4 @@ This repo provides a starter kit thats include Getx package. It includes key-val
 - <a href="https://loic-ngou.medium.com/flutter-how-to-create-a-todo-app-using-firebase-firestore-and-firebase-authentication-with-getx-89bdaacc6de6" target="_blank">Todo app using firebase firestore and firebase authentication with GetX</a>
 
 ## Thanks
-Thanks for contribution @yekkaplan
+Thanks for contribution <yekkaplan>
