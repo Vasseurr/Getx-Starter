@@ -11,7 +11,7 @@ class Utils {
       {required String title, required String content}) {
     showDialog(
       context: context,
-      builder: (_) => new AlertDialog(
+      builder: (_) => AlertDialog(
         title: Text(
           title,
           textAlign: TextAlign.center,
