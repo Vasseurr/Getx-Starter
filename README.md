@@ -16,3 +16,6 @@ This repo provides a starter kit thats include Getx package. It includes key-val
 - <a href="https://github.com/jonataslaw/getx" target="_blank">GetX Documentation of Jonataslaw</a>
 - <a href="https://jeffmcmorris.medium.com/getx-flutter-firebase-auth-example-b383c1dd1de2" target="_blank">GetX Flutter Firebase Auth Example</a>
 - <a href="https://loic-ngou.medium.com/flutter-how-to-create-a-todo-app-using-firebase-firestore-and-firebase-authentication-with-getx-89bdaacc6de6" target="_blank">Todo app using firebase firestore and firebase authentication with GetX</a>
+
+## Thanks
+Thanks for contribution @yekkaplan
