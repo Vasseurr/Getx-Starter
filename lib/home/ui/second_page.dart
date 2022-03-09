@@ -23,7 +23,7 @@ class SecondPage extends StatelessWidget {
               // child: Text(homeController.getFromHiveManager()),
             ),
             const Spacer(),
-            VasseurrBttn(
+            CustomBttn(
                 buttonText: "Change value",
                 onPressed: () {
                   homeController.changeValue();

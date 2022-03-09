@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:getx_starter/core/components/buttons/custom_button.dart';
 import 'package:getx_starter/core/components/buttons/diamond_button.dart';
-import 'package:getx_starter/core/components/text/text_form_field.dart';
+import 'package:getx_starter/core/components/text/custom_text_form_field.dart';
 import 'dart:math' as math;
 
 class RegisterPage extends StatefulWidget {
@@ -109,7 +109,7 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   button(String text, BuildContext context) {
-    return VasseurrBttn(
+    return CustomBttn(
         width: MediaQuery.of(context).size.width * 0.8,
         radius: 20,
         fontWeight: FontWeight.bold,
@@ -125,7 +125,7 @@ class _RegisterPageState extends State<RegisterPage> {
       margin: const EdgeInsets.only(top: 15),
       width: MediaQuery.of(context).size.width * 0.9,
       height: MediaQuery.of(context).size.height * 0.08,
-      child: VasseurrTFF(
+      child: CustomTFF(
         icon: icon,
         hintText: hintText,
         hintColor: Colors.grey,

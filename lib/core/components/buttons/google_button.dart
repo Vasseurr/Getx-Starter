@@ -12,7 +12,7 @@ class Google extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return VasseurrBttn(
+    return CustomBttn(
       height: context.getHeight * 0.05,
       width: context.getWidth * 0.35,
       buttonText: "Google",

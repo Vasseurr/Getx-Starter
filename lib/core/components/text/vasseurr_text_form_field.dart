@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
 
-class VasseurrTextFormField extends StatelessWidget {
+class VasseurrTFF extends StatelessWidget {
   double? width;
   double? height;
   TextInputAction? textInputAction;
   TextInputType? textInputType;
   Color? cursorColor;
+  Color? labelTextColor;
+  Color? hintTextColor;
   Icon? icon;
   String? hintText;
   String? labelText;
   int? maxLength;
   int? maxLines;
+  double? radius;
+  bool? filled;
+  bool? obscureText;
   TextEditingController? textEditingController;
   Function(String)? onChanged;
   Function(String? value)? onSaved;
   String? Function(String? value)? validator;
 
-  VasseurrTextFormField(
+  VasseurrTFF(
       {Key? key,
       this.height,
       this.width,
@@ -24,6 +29,8 @@ class VasseurrTextFormField extends StatelessWidget {
       this.textInputType,
       this.textEditingController,
       this.cursorColor,
+      this.labelTextColor,
+      this.hintTextColor,
       this.hintText,
       this.labelText,
       this.onChanged,
@@ -31,33 +38,52 @@ class VasseurrTextFormField extends StatelessWidget {
       this.validator,
       this.maxLength,
       this.maxLines,
+      this.radius,
+      this.filled,
+      this.obscureText,
       this.icon})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width ?? 350,
       height: height ?? 50,
       child: TextFormField(
-        maxLines: maxLines,
+        maxLines: maxLines ?? 1,
         maxLength: maxLength,
-         controller: textEditingController,
-      onChanged: onChanged,
+        controller: textEditingController,
+        onChanged: onChanged,
+        obscureText: obscureText ?? false,
         textInputAction: textInputAction ?? TextInputAction.next,
-        keyboardType: textInputType ?? TextInputType.number,
+        keyboardType: textInputType ?? TextInputType.text,
         cursorColor: cursorColor ?? Colors.orangeAccent.shade400,
         decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          fillColor: const Color.fromRGBO(245, 245, 245, 1),
+          filled: filled ?? false,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(radius ?? 10),
+            borderSide: BorderSide(color: Colors.grey.shade200, width: 1.0),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(radius ?? 10),
+            borderSide: BorderSide(color: Colors.grey.shade200, width: 1.0),
+          ),
           suffixIcon: icon,
           hintText: hintText,
           labelStyle: TextStyle(
-            color: Colors.grey.shade700,
+            color: labelTextColor ?? Colors.grey.shade700,
             fontFamily: "Poppins",
             fontWeight: FontWeight.w700,
           ),
           contentPadding: const EdgeInsets.all(8.0),
           hintStyle: Theme.of(context).textTheme.caption?.copyWith(
-              fontSize: 15, fontWeight: FontWeight.w600, color: Colors.grey),
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              color: hintTextColor ?? Colors.grey),
           labelText: labelText,
         ),
         style: const TextStyle(

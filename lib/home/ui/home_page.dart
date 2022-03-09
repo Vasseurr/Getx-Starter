@@ -43,7 +43,7 @@ class HomePage extends GetView<HomeController> {
                       _.saveUser();
                     }),
                 const Spacer(),*/
-                VasseurrBttn(
+                CustomBttn(
                     buttonText: "Save value",
                     onPressed: () async {
                       _.saveUser();
@@ -53,7 +53,7 @@ class HomePage extends GetView<HomeController> {
                               " ");
                     }),
                 const Spacer(),
-                VasseurrBttn(
+                CustomBttn(
                     height: context.height * 0.08,
                     width: context.width * 0.4,
                     radius: 15,

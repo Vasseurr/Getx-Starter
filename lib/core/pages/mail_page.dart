@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:getx_starter/core/components/buttons/custom_button.dart';
-import 'package:getx_starter/core/components/text/text_form_field.dart';
+import 'package:getx_starter/core/components/text/custom_text_form_field.dart';
 import 'package:getx_starter/core/extension/context_extension.dart';
 
 class MailPage extends StatefulWidget {
@@ -30,7 +30,7 @@ class _MailPageState extends State<MailPage> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  VasseurrTFF(
+                  CustomTFF(
                     textInputAction: TextInputAction.next,
                     hintText: "E-mail",
                     hintColor: Colors.grey,
@@ -39,7 +39,7 @@ class _MailPageState extends State<MailPage> {
                     maxLength: 50,
                   ),
                   SizedBox(height: context.getHeight * 0.03),
-                  VasseurrTFF(
+                  CustomTFF(
                     textInputAction: TextInputAction.next,
                     hintText: "Title",
                     hintColor: Colors.grey,
@@ -48,7 +48,7 @@ class _MailPageState extends State<MailPage> {
                     maxLength: 50,
                   ),
                   SizedBox(height: context.getHeight * 0.03),
-                  VasseurrTFF(
+                  CustomTFF(
                     textInputAction: TextInputAction.done,
                     hintText: "Description",
                     hintColor: Colors.grey,
@@ -58,7 +58,7 @@ class _MailPageState extends State<MailPage> {
                     maxLength: 250,
                   ),
                   SizedBox(height: context.getHeight * 0.03),
-                  VasseurrBttn(
+                  CustomBttn(
                       width: context.getWidth * 0.9,
                       height: context.getHeight * 0.06,
                       buttonText: "Submit",

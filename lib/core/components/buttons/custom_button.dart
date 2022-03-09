@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-class VasseurrBttn extends StatelessWidget {
+class CustomBttn extends StatelessWidget {
   final String buttonText;
   final Color buttonColor;
   final Color borderColor;
@@ -16,7 +16,7 @@ class VasseurrBttn extends StatelessWidget {
   final FontWeight fontWeight;
   final double fontSize;
 
-  const VasseurrBttn(
+  const CustomBttn(
       {Key? key,
       required this.buttonText,
       this.buttonColor = Colors.blue,

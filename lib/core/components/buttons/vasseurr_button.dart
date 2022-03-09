@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_starter/core/extension/context_extension.dart';
 
-class VasseurrButton extends StatelessWidget {
+class VasseurrBttn extends StatelessWidget {
   String buttonText;
   double? buttonHeight;
   double? buttonWidth;
@@ -12,7 +12,7 @@ class VasseurrButton extends StatelessWidget {
   Color? buttonSplashColor;
   Function() onpressed;
 
-  VasseurrButton(
+  VasseurrBttn(
       {Key? key,
       required this.buttonText,
       this.buttonHeight,

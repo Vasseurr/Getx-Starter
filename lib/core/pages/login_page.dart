@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:getx_starter/core/components/buttons/custom_button.dart';
-import 'package:getx_starter/core/components/text/text_form_field.dart';
+import 'package:getx_starter/core/components/text/custom_text_form_field.dart';
 import 'package:getx_starter/core/extension/context_extension.dart';
 
 class LoginPage extends StatefulWidget {
@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
   Column buttons(BuildContext context) {
     return Column(
       children: [
-        VasseurrBttn(
+        CustomBttn(
             buttonText: "LOGIN",
             fontSize: 16,
             buttonColor: Colors.white,
@@ -182,7 +182,7 @@ class _LoginPageState extends State<LoginPage> {
         const SizedBox(
           height: 10,
         ),
-        VasseurrTFF(
+        CustomTFF(
           // fillColor: Color(int.parse("0x1597E5")),
           fillColor: Colors.white12,
           textColor: Colors.white,
@@ -216,7 +216,7 @@ class _LoginPageState extends State<LoginPage> {
         const SizedBox(
           height: 10,
         ),
-        VasseurrTFF(
+        CustomTFF(
           // fillColor: Color(int.parse("0x1597E5")),
           fillColor: Colors.white12,
           textColor: Colors.white,
