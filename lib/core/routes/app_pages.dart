@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
+import 'package:getx_starter/core/pages/green_layout/login_page2.dart';
 import 'package:getx_starter/core/pages/login_page.dart';
 import 'package:getx_starter/core/pages/register_page.dart';
-import 'package:getx_starter/core/pages/register_page2.dart';
+import 'package:getx_starter/core/pages/red_accent_layout/register_page2.dart';
+import 'package:getx_starter/core/pages/green_layout/register_page3.dart';
 import 'package:getx_starter/core/routes/app_routes.dart';
 import 'package:getx_starter/home/bindings/home_binding.dart';
 import 'package:getx_starter/home/ui/home_page.dart';
@@ -18,12 +20,18 @@ class AppPages {
         page: () => const LoginPage(),
         binding: HomeBinding()),
     GetPage(
+        name: Routes.LOGIN2, page: () => LoginPage2(), binding: HomeBinding()),
+    GetPage(
         name: Routes.REGISTER,
         page: () => const RegisterPage(),
         binding: HomeBinding()),
     GetPage(
         name: Routes.REGISTER2,
         page: () => RegisterPage2(),
+        binding: HomeBinding()),
+    GetPage(
+        name: Routes.REGISTER3,
+        page: () => RegisterPage3(),
         binding: HomeBinding()),
     GetPage(
         name: Routes.SECOND,

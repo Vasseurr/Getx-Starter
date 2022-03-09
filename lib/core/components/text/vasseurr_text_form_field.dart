@@ -8,7 +8,8 @@ class VasseurrTFF extends StatelessWidget {
   Color? cursorColor;
   Color? labelTextColor;
   Color? hintTextColor;
-  Icon? icon;
+  Icon? prefixIcon;
+  Icon? suffixIcon;
   String? hintText;
   String? labelText;
   int? maxLength;
@@ -41,7 +42,8 @@ class VasseurrTFF extends StatelessWidget {
       this.radius,
       this.filled,
       this.obscureText,
-      this.icon})
+      this.prefixIcon,
+      this.suffixIcon})
       : super(key: key);
 
   @override
@@ -72,7 +74,8 @@ class VasseurrTFF extends StatelessWidget {
             borderRadius: BorderRadius.circular(radius ?? 10),
             borderSide: BorderSide(color: Colors.grey.shade200, width: 1.0),
           ),
-          suffixIcon: icon,
+          suffixIcon: suffixIcon,
+          prefixIcon: prefixIcon,
           hintText: hintText,
           labelStyle: TextStyle(
             color: labelTextColor ?? Colors.grey.shade700,

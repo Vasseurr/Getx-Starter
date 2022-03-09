@@ -5,7 +5,7 @@ import 'package:getx_starter/core/extension/context_extension.dart';
 
 class RegisterPage2 extends StatelessWidget {
   RegisterPage2({Key? key}) : super(key: key);
-  var _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +16,6 @@ class RegisterPage2 extends StatelessWidget {
             _background(context),
             _form(context),
             _icon(context),
-            /*  Container(
-                height: context.getHeight * 0.2,
-                width: context.getWidth * 0.2,
-                margin: EdgeInsets.symmetric(
-                    vertical: context.getHeight * 0.4,
-                    horizontal: context.getWidth * 0.4),
-                child: Image.asset("assets/images/gif.gif"))*/
           ],
         ));
   }
@@ -106,8 +99,8 @@ class RegisterPage2 extends StatelessWidget {
               Colors.redAccent.shade100
             ]),
         //   color: Colors.redAccent.shade400,
-        borderRadius: const BorderRadius.horizontal(
-            left: Radius.circular(30), right: Radius.circular(30)),
+        borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(30), topRight: Radius.circular(30)),
       ),
       height: context.getHeight * 0.4,
     );
