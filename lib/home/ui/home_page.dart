@@ -11,7 +11,6 @@ import 'package:getx_starter/core/extension/context_extension.dart';
 import 'package:getx_starter/core/init/cache/hive_manager.dart';
 import 'package:getx_starter/core/routes/app_routes.dart';
 import 'package:getx_starter/home/controller/home_controller.dart';
-import 'package:getx_starter/home/ui/sample.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({Key? key}) : super(key: key);
@@ -61,14 +60,6 @@ class HomePage extends GetView<HomeController> {
                     buttonText: "Go to Second Page",
                     onPressed: () {
                       Get.toNamed(Routes.SECOND);
-                    }),
-                VasseurrBttn(
-                    height: context.height * 0.08,
-                    width: context.width * 0.4,
-                    radius: 15,
-                    buttonText: "Go to Third Page",
-                    onPressed: () {
-                      Get.to(() => Sample());
                     }),
                 Google(),
                 Facebook(),
