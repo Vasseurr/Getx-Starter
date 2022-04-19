@@ -1,9 +1,8 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:getx_starter/home/model/user.dart';
-import 'package:getx_starter/home/service/base/home_service_base.dart';
-import 'package:http/http.dart' as http;
+import '../../home/model/user.dart';
+import '../../home/service/base/home_service_base.dart';
 
 class HomeService with HomeServiceBase {
   // final http.Client httpClient;

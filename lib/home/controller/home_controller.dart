@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:getx_starter/core/constants/hive_keys.dart';
-import 'package:getx_starter/core/init/cache/hive_manager.dart';
-import 'package:getx_starter/home/repository/home_repository.dart';
+import '../../core/constants/hive_keys.dart';
+import '../../core/init/cache/hive_manager.dart';
+import '../../home/repository/home_repository.dart';
 
 class HomeController extends GetxController {
   final HomeRepository _repository;

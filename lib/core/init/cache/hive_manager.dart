@@ -1,5 +1,4 @@
-import 'package:getx_starter/core/constants/hive_keys.dart';
-import 'package:hive/hive.dart';
+import '../../constants/hive_keys.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class HiveManager {

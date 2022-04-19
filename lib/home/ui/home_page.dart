@@ -2,15 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_starter/core/components/buttons/custom_button.dart';
-import 'package:getx_starter/core/components/buttons/facebook_button.dart';
-import 'package:getx_starter/core/components/buttons/google_button.dart';
-import 'package:getx_starter/core/components/utils/utils.dart';
-import 'package:getx_starter/core/constants/hive_keys.dart';
-import 'package:getx_starter/core/extension/context_extension.dart';
-import 'package:getx_starter/core/init/cache/hive_manager.dart';
-import 'package:getx_starter/core/routes/app_routes.dart';
-import 'package:getx_starter/home/controller/home_controller.dart';
+import '../../core/components/buttons/custom_button.dart';
+import '../../core/components/buttons/facebook_button.dart';
+import '../../core/components/buttons/google_button.dart';
+import '../../core/components/utils/utils.dart';
+import '../../core/constants/hive_keys.dart';
+import '../../core/init/cache/hive_manager.dart';
+import '../../core/routes/app_routes.dart';
+import '../../core/extension/context_extension.dart';
+import '../controller/home_controller.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({Key? key}) : super(key: key);

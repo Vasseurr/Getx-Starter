@@ -1,5 +1,5 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:getx_starter/core/constants/secure_storage_keys.dart';
+import '../../constants/secure_storage_keys.dart';
 
 class SecureStorageManager {
   late FlutterSecureStorage _secureStorage;

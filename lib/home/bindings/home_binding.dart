@@ -1,9 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
-import 'package:getx_starter/home/controller/home_controller.dart';
-import 'package:getx_starter/home/repository/home_repository.dart';
-import 'package:getx_starter/home/service/home_service.dart';
-import 'package:http/http.dart' as http;
+import '../../home/controller/home_controller.dart';
+import '../../home/repository/home_repository.dart';
+import '../../home/service/home_service.dart';
 
 class HomeBinding implements Bindings {
   @override

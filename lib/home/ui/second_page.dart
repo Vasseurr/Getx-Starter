@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_starter/core/components/buttons/custom_button.dart';
-import 'package:getx_starter/core/extension/context_extension.dart';
-import 'package:getx_starter/home/controller/home_controller.dart';
+import '../../core/components/buttons/custom_button.dart';
+import '../../core/extension/context_extension.dart';
+import '../../home/controller/home_controller.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({Key? key}) : super(key: key);

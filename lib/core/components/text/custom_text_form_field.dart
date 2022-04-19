@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_starter/core/constants/colors.dart';
-import 'package:getx_starter/core/init/theme/light/color_scheme_light.dart';
+import '../../constants/colors.dart';
 
 class CustomTFF extends StatelessWidget {
   TextEditingController? textEditingController;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:getx_starter/core/components/buttons/vasseurr_button.dart';
-import 'package:getx_starter/core/components/text/vasseurr_text_form_field.dart';
-import 'package:getx_starter/core/extension/context_extension.dart';
+import '../../../core/components/buttons/vasseurr_button.dart';
+import '../../../core/components/text/vasseurr_text_form_field.dart';
+import '../../../core/extension/context_extension.dart';
 
 class RegisterPage2 extends StatelessWidget {
   RegisterPage2({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:getx_starter/core/extension/context_extension.dart';
+import '../../extension/context_extension.dart';
 
 import 'custom_button.dart';
 

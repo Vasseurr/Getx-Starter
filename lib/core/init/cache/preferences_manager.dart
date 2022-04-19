@@ -1,4 +1,4 @@
-import 'package:getx_starter/core/constants/preferences_keys.dart';
+import '../../constants/preferences_keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PreferencesManager {

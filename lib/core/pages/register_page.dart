@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:getx_starter/core/components/buttons/custom_button.dart';
-import 'package:getx_starter/core/components/buttons/diamond_button.dart';
-import 'package:getx_starter/core/components/text/custom_text_form_field.dart';
-import 'dart:math' as math;
+import '../../core/components/buttons/custom_button.dart';
+
+import '../../core/components/text/custom_text_form_field.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);

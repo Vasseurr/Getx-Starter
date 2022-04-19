@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:getx_starter/core/components/buttons/custom_button.dart';
-import 'package:getx_starter/core/components/text/custom_text_form_field.dart';
-import 'package:getx_starter/core/extension/context_extension.dart';
+import '../../core/components/buttons/custom_button.dart';
+import '../../core/components/text/custom_text_form_field.dart';
+import '../../core/extension/context_extension.dart';
 
 class MailPage extends StatefulWidget {
   const MailPage({Key? key}) : super(key: key);

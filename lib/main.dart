@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_starter/core/init/cache/hive_manager.dart';
-import 'package:getx_starter/core/routes/app_pages.dart';
-import 'package:getx_starter/core/routes/app_routes.dart';
+
+import 'core/init/cache/hive_manager.dart';
+import 'core/routes/app_pages.dart';
+import 'core/routes/app_routes.dart';
 
 void main() async {
   await HiveManager.preferencesInit();
   //await Hive.initFlutter();
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: Routes.REGISTER3,
+    initialRoute: Routes.REGISTER2,
     //theme: AppThemeLight.instance.theme,
     getPages: AppPages.pages,
   ));
