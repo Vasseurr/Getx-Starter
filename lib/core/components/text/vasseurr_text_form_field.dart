@@ -12,10 +12,12 @@ class VasseurrTFF extends StatelessWidget {
   Icon? suffixIcon;
   String? hintText;
   String? labelText;
+  FocusNode? focusNode;
   int? maxLength;
   int? maxLines;
   double? radius;
   bool? filled;
+  bool? autoFocus;
   bool? obscureText;
   TextEditingController? textEditingController;
   Function(String)? onChanged;
@@ -40,7 +42,9 @@ class VasseurrTFF extends StatelessWidget {
       this.maxLength,
       this.maxLines,
       this.radius,
+      this.focusNode,
       this.filled,
+      this.autoFocus,
       this.obscureText,
       this.prefixIcon,
       this.suffixIcon})
@@ -55,12 +59,16 @@ class VasseurrTFF extends StatelessWidget {
         maxLines: maxLines ?? 1,
         maxLength: maxLength,
         controller: textEditingController,
+        focusNode: focusNode,
+        autofocus: autoFocus ?? false,
         onChanged: onChanged,
         obscureText: obscureText ?? false,
         textInputAction: textInputAction ?? TextInputAction.next,
         keyboardType: textInputType ?? TextInputType.text,
         cursorColor: cursorColor ?? Colors.orangeAccent.shade400,
         decoration: InputDecoration(
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -82,7 +90,6 @@ class VasseurrTFF extends StatelessWidget {
             fontFamily: "Poppins",
             fontWeight: FontWeight.w700,
           ),
-          contentPadding: const EdgeInsets.all(8.0),
           hintStyle: Theme.of(context).textTheme.caption?.copyWith(
               fontSize: 15,
               fontWeight: FontWeight.w600,
