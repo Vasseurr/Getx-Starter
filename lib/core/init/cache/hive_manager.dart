@@ -16,7 +16,7 @@ class HiveManager {
     // Hive.init(directory.path);
     await Hive.initFlutter();
     //  HiveManager._init();
-    openBox();
+    await openBox();
     return;
   }
 
