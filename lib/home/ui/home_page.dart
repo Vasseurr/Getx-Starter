@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_starter/core/components/text/vasseurr_text_form_field.dart';
 import '../../core/components/buttons/custom_button.dart';
 import '../../core/components/buttons/facebook_button.dart';
 import '../../core/components/buttons/google_button.dart';

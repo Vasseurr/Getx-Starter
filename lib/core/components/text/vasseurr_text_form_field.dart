@@ -12,6 +12,7 @@ class VasseurrTFF extends StatelessWidget {
   Icon? suffixIcon;
   String? hintText;
   String? labelText;
+  String? helperText;
   FocusNode? focusNode;
   int? maxLength;
   int? maxLines;
@@ -35,6 +36,7 @@ class VasseurrTFF extends StatelessWidget {
       this.labelTextColor,
       this.hintTextColor,
       this.hintText,
+      this.helperText,
       this.labelText,
       this.onChanged,
       this.onSaved,
@@ -67,6 +69,7 @@ class VasseurrTFF extends StatelessWidget {
         keyboardType: textInputType ?? TextInputType.text,
         cursorColor: cursorColor ?? Colors.orangeAccent.shade400,
         decoration: InputDecoration(
+          helperText: helperText,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
           border: OutlineInputBorder(
