@@ -1,17 +1,18 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:getx_starter/core/components/text/vasseurr_text_form_field.dart';
+import 'package:get/get.dart' hide Trans;
 import '../../core/components/buttons/custom_button.dart';
 import '../../core/components/buttons/facebook_button.dart';
 import '../../core/components/buttons/google_button.dart';
 import '../../core/components/utils/utils.dart';
 import '../../core/constants/hive_keys.dart';
 import '../../core/init/cache/hive_manager.dart';
+import '../../core/init/lang/locale_keys.g.dart';
 import '../../core/routes/app_routes.dart';
 import '../../core/extension/context_extension.dart';
 import '../controller/home_controller.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({Key? key}) : super(key: key);
@@ -45,7 +46,7 @@ class HomePage extends GetView<HomeController> {
                     }),
                 const Spacer(),*/
                 CustomBttn(
-                    buttonText: "Save value",
+                    buttonText: LocaleKeys.button_save.tr(),
                     onPressed: () async {
                       _.saveUser();
                       Utils.instance.showSnackBar(context,

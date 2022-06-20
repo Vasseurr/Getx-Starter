@@ -1,17 +1,37 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_starter/core/init/cache/localization_manager.dart';
+import 'package:getx_starter/core/init/init.dart';
 
-import 'core/init/cache/hive_manager.dart';
 import 'core/routes/app_pages.dart';
 import 'core/routes/app_routes.dart';
 
-void main() async {
-  await HiveManager.preferencesInit();
+Future<void> main() async {
+  await ProjectInit.init();
   //await Hive.initFlutter();
-  runApp(GetMaterialApp(
-    debugShowCheckedModeBanner: false,
-    initialRoute: Routes.REGISTER3,
-    //theme: AppThemeLight.instance.theme,
-    getPages: AppPages.pages,
-  ));
+  runApp(
+    EasyLocalization(
+        supportedLocales: LocalizationManager.instance.supportedLocales,
+        path: LocalizationManager.instance.localizationPath,
+        startLocale: LocalizationManager.instance.getStartLocale(),
+        child: const MyApp()),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: Routes.INITIAL,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      //theme: AppThemeLight.instance.theme,
+      getPages: AppPages.pages,
+    );
+  }
 }
