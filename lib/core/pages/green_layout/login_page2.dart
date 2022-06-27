@@ -97,7 +97,7 @@ class LoginPage2 extends StatelessWidget {
               hintText: "Password",
               filled: true,
               textInputAction: TextInputAction.done,
-              obscureText: true,
+              obsecureText: true,
             ),
             SizedBox(height: context.getHeight * 0.02),
             VasseurrBttn(

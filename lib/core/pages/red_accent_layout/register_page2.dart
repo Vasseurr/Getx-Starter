@@ -71,7 +71,7 @@ class RegisterPage2 extends StatelessWidget {
               hintText: "vasseurr",
               filled: true,
               textInputAction: TextInputAction.done,
-              obscureText: true,
+              obsecureText: true,
             ),
             SizedBox(height: context.getHeight * 0.05),
             VasseurrBttn(
