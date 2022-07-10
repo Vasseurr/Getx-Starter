@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 class MyColors {
@@ -32,4 +34,19 @@ class MyColors {
       900: Color(0xFF25aae1),
     },
   );
+
+  //* SnackBar colors
+  static const snackBar_error = Color(0xFFED2E7E);
+  static const snackBar_error_background = Color(0xFFfdeaf2);
+  static const snackBar_success = Color(0xFF00BA88);
+  static const snackBar_success_background = Color(0xFFe6f8f3);
+  static const snackBar_info = Color(0xFF3394F6);
+  static const snackBar_info_background = Color(0xFFebf4fe);
+
+  //*Alert dialog
+  static const dialog_title = Color(0xFF1A1D1E);
+  static const dialog_content = Color(0xFF6A6A6A);
+  static const dialog_confirm_button_background =
+      Color.fromRGBO(17, 111, 254, 1);
+  static final dialog_cancel_text = Colors.blue.shade500;
 }
