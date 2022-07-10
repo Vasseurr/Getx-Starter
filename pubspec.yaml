@@ -52,6 +52,8 @@ dependencies:
   easy_localization: ^3.0.1
 
   font_awesome_flutter: ^9.1.0
+  google_fonts: ^3.0.1
+  sizer: ^2.0.15
 
 dev_dependencies:
   flutter_test:
