@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_starter/core/init/cache/localization_manager.dart';
 import 'package:getx_starter/core/init/init.dart';
+import 'package:sizer/sizer.dart';
 
 import 'core/routes/app_pages.dart';
 import 'core/routes/app_routes.dart';
@@ -24,14 +25,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: Routes.INITIAL,
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      //theme: AppThemeLight.instance.theme,
-      getPages: AppPages.pages,
-    );
+    return Sizer(builder: (context, orientation, deviceType) {
+      return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: Routes.INITIAL,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        //theme: AppThemeLight.instance.theme,
+        getPages: AppPages.pages,
+      );
+    });
   }
 }

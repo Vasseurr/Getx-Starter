@@ -43,10 +43,18 @@ class MyColors {
   static const snackBar_info = Color(0xFF3394F6);
   static const snackBar_info_background = Color(0xFFebf4fe);
 
-  //*Alert dialog
+  //* Alert dialog
   static const dialog_title = Color(0xFF1A1D1E);
   static const dialog_content = Color(0xFF6A6A6A);
   static const dialog_confirm_button_background =
       Color.fromRGBO(17, 111, 254, 1);
   static final dialog_cancel_text = Colors.blue.shade500;
+
+  //* Appbar
+  static const primaryBlueColor = Color.fromARGB(255, 137, 65, 220);
+  static const primaryGreenColor = Color.fromARGB(255, 35, 32, 219);
+  static const List<Color> primaryColorList = [
+    primaryBlueColor,
+    primaryGreenColor
+  ];
 }

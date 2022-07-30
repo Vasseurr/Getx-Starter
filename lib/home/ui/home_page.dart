@@ -2,10 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Trans;
+import 'package:getx_starter/core/components/widgets/custom_appbar.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 import '../../core/components/buttons/custom_button.dart';
 import '../../core/components/buttons/facebook_button.dart';
 import '../../core/components/buttons/google_button.dart';
 import '../../core/components/utils/utils.dart';
+import '../../core/constants/colors.dart';
 import '../../core/constants/hive_keys.dart';
 import '../../core/init/cache/hive_manager.dart';
 import '../../core/init/lang/locale_keys.g.dart';
@@ -20,7 +24,22 @@ class HomePage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Getx Example"),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: MyColors.primaryColorList)),
+        ),
+        title: Text(
+          "Get-X Starter",
+          style: GoogleFonts.lobster(
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+            fontSize: 17.sp,
+          ),
+        ),
+        centerTitle: true,
       ),
       body: Container(
         margin: EdgeInsets.all(context.mediumHeightValue),

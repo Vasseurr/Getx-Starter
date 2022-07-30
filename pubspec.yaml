@@ -54,8 +54,10 @@ dependencies:
   #Animations
   lottie: ^1.3.0
 
-  font_awesome_flutter: ^9.1.0
+  #Text Customize
   google_fonts: ^3.0.1
+
+  font_awesome_flutter: ^9.1.0
   sizer: ^2.0.15
 
 dev_dependencies:
