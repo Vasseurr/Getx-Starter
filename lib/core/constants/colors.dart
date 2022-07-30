@@ -57,4 +57,7 @@ class MyColors {
     primaryBlueColor,
     primaryGreenColor
   ];
+
+  //* Main colors
+  static const mainButtonColor = Color.fromARGB(255, 44, 42, 135);
 }

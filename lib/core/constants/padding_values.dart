@@ -1,6 +1,6 @@
 import 'package:sizer/sizer.dart';
 
-class CustomPadding {
+class CustomPaddingValues {
   static double horizontalPadding = 6.5.w;
   static double verticalPadding = 2.5.h;
   static double xxSmallV = 0.3.h;

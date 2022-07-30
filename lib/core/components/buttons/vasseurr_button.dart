@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getx_starter/core/constants/colors.dart';
 
 class VasseurrBttn extends StatelessWidget {
   String buttonText;
@@ -42,7 +43,7 @@ class VasseurrBttn extends StatelessWidget {
             .headline6,
       ),
       elevation: 10,
-      fillColor: buttonColor ?? Colors.orangeAccent.shade400,
+      fillColor: buttonColor ?? MyColors.mainButtonColor,
       splashColor: buttonSplashColor ?? Colors.white,
     );
   }

@@ -6,11 +6,50 @@ import '../../home/repository/home_repository.dart';
 class HomeController extends GetxController {
   final HomeRepository _repository;
   final RxString _userName = "".obs;
-  HomeController(this._repository) : assert(_repository != null);
-
-  get userName => _userName.value;
+  final RxBool _isLoading = false.obs;
+  RxList<String> searchTerms = RxList();
+  RxList<String> tempSearchTerms = RxList();
+  HomeController(this._repository);
 
   set userName(value) => _userName.value = value;
+  get userName => _userName.value;
+
+  set isLoading(value) => _isLoading.value = value;
+  get isLoading => _isLoading.value;
+
+  changeLoading() => _isLoading.value = !_isLoading.value;
+
+  @override
+  void onInit() {
+    super.onInit();
+    changeLoading();
+    searchTerms.value = [
+      'Apple',
+      'Banana',
+      'Pear',
+      'Watermelons',
+      'Oranges',
+      'Blueberries',
+      'Strawberries',
+      'Raspberries'
+    ];
+    tempSearchTerms.value = [
+      'Apple',
+      'Banana',
+      'Pear',
+      'Watermelons',
+      'Oranges',
+      'Blueberries',
+      'Strawberries',
+      'Raspberries'
+    ];
+  }
+
+  @override
+  void onReady() {
+    super.onReady();
+    changeLoading();
+  }
 
   getUser() async {
     var result = await _repository.getUser();

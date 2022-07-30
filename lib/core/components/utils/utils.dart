@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_starter/core/constants/colors.dart';
+import 'package:getx_starter/core/constants/padding_values.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sizer/sizer.dart';
-import '../../constants/padding.dart';
 import '../../extension/context_extension.dart';
 
 enum SnackbarType {
@@ -69,10 +68,10 @@ class Utils {
       message,
       duration: duration,
       padding: EdgeInsets.only(
-          left: CustomPadding.horizontalPadding,
-          top: CustomPadding.smallV,
-          bottom: CustomPadding.smallV,
-          right: CustomPadding.xSmallH),
+          left: CustomPaddingValues.horizontalPadding,
+          top: CustomPaddingValues.smallV,
+          bottom: CustomPaddingValues.smallV,
+          right: CustomPaddingValues.xSmallH),
       icon: Icon(
         icon,
         color: primaryColor,
@@ -107,11 +106,12 @@ class Utils {
           fontSize: 20,
           fontWeight: FontWeight.w700),
       titlePadding: EdgeInsets.only(
-          left: CustomPadding.largeH,
-          right: CustomPadding.largeH,
-          top: CustomPadding.largeV),
+          left: CustomPaddingValues.largeH,
+          right: CustomPaddingValues.largeH,
+          top: CustomPaddingValues.largeV),
       contentPadding: EdgeInsets.symmetric(
-          horizontal: CustomPadding.mediumH, vertical: CustomPadding.mediumV),
+          horizontal: CustomPaddingValues.mediumH,
+          vertical: CustomPaddingValues.mediumV),
       content: Column(
         children: [
           Text(
@@ -122,7 +122,7 @@ class Utils {
                 fontSize: 14,
                 fontWeight: FontWeight.w500),
           ),
-          SizedBox(height: CustomPadding.mediumV),
+          SizedBox(height: CustomPaddingValues.mediumV),
         ],
       ),
       actions: [

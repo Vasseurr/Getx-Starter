@@ -117,7 +117,7 @@ class VasseurrTFF extends StatelessWidget {
             color: textColor ?? Colors.black,
             fontFamily: "Poppins",
             fontSize: fontSize ?? 16,
-            fontWeight: FontWeight.w500),
+            fontWeight: FontWeight.w400),
         onSaved: onSaved,
         validator: validator,
       ),

@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Trans;
+import 'package:getx_starter/core/components/buttons/vasseurr_button.dart';
 import 'package:getx_starter/core/components/widgets/custom_appbar.dart';
+import 'package:getx_starter/home/ui/search_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import '../../core/components/buttons/custom_button.dart';
@@ -13,6 +15,7 @@ import '../../core/constants/colors.dart';
 import '../../core/constants/hive_keys.dart';
 import '../../core/init/cache/hive_manager.dart';
 import '../../core/init/lang/locale_keys.g.dart';
+import '../../core/init/navigation/navigation_route.dart';
 import '../../core/routes/app_routes.dart';
 import '../../core/extension/context_extension.dart';
 import '../controller/home_controller.dart';
@@ -23,24 +26,7 @@ class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                  colors: MyColors.primaryColorList)),
-        ),
-        title: Text(
-          "Get-X Starter",
-          style: GoogleFonts.lobster(
-            color: Colors.white,
-            fontWeight: FontWeight.normal,
-            fontSize: 17.sp,
-          ),
-        ),
-        centerTitle: true,
-      ),
+      appBar: CustomAppBar(),
       body: Container(
         margin: EdgeInsets.all(context.mediumHeightValue),
         child: GetX<HomeController>(
@@ -75,15 +61,19 @@ class HomePage extends GetView<HomeController> {
                     }),
                 const Spacer(),
                 CustomBttn(
-                    height: context.height * 0.08,
+                    height: context.height * 0.05,
                     width: context.width * 0.4,
                     radius: 15,
                     buttonText: "Go to Second Page",
                     onPressed: () {
                       Get.toNamed(Routes.SECOND);
                     }),
-                Google(),
-                Facebook(),
+                VasseurrBttn(
+                    buttonWidth: context.getWidth * 0.5,
+                    buttonHeight: context.getHeight * 0.05,
+                    buttonText: "Search Page",
+                    onpressed: (() =>
+                        NavigationRoute.instance.to(() => SearchPage()))),
               ],
             );
           },
