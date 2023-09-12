@@ -3,12 +3,12 @@ import '../../constants/secure_storage_keys.dart';
 
 class SecureStorageManager {
   late FlutterSecureStorage _secureStorage;
-  static SecureStorageManager _instance = SecureStorageManager._init();
+  static final SecureStorageManager _instance = SecureStorageManager._init();
 
   static SecureStorageManager get instance => _instance;
 
   SecureStorageManager._init() {
-    _secureStorage = new FlutterSecureStorage();
+    _secureStorage = const FlutterSecureStorage();
   }
 
   Future<void> setStringValue(SecureStorageKeys key, String value) async {

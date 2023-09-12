@@ -60,7 +60,7 @@ class RegisterPage3 extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .apply(bodyColor: Colors.black, fontSizeFactor: 1.25)
-                .headline5));
+                .headlineSmall));
   }
 
   Form _form(BuildContext context) {
@@ -110,7 +110,7 @@ class RegisterPage3 extends StatelessWidget {
               hintText: "Password",
               filled: true,
               textInputAction: TextInputAction.done,
-              obsecureText: true,
+              obscureText: true,
             ),
             SizedBox(height: context.getHeight * 0.02),
             VasseurrBttn(
@@ -119,7 +119,7 @@ class RegisterPage3 extends StatelessWidget {
                 borderColor: green,
                 borderRadius: 8,
                 buttonText: "Sign Up",
-                onpressed: () {})
+                onPressed: () {})
           ]),
         ),
       ),

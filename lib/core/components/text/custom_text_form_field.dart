@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import '../../constants/colors.dart';
 
@@ -14,7 +16,7 @@ class CustomTFF extends StatelessWidget {
   Color hintColor;
   Color borderColor;
   Icon? icon;
-  bool obsecureText;
+  bool obscureText;
   Color labelColor;
   TextInputAction? textInputAction;
 
@@ -49,7 +51,7 @@ class CustomTFF extends StatelessWidget {
       this.textColor = Colors.black,
       this.hintColor = Colors.white,
       this.borderColor = MyColors.colorPrimary,
-      this.obsecureText = false})
+      this.obscureText = false})
       : super(key: key);
 
   @override
@@ -57,7 +59,7 @@ class CustomTFF extends StatelessWidget {
     return TextFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
       textInputAction: textInputAction,
-      obscureText: obsecureText,
+      obscureText: obscureText,
       controller: textEditingController,
       onChanged: onChanged,
       initialValue: initialText,
@@ -84,7 +86,7 @@ class CustomTFF extends StatelessWidget {
           ),
           labelText: labelText,
           hintText: hintText,
-          hintStyle: Theme.of(context).textTheme.caption?.copyWith(
+          hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
               fontSize: 15, fontWeight: FontWeight.w600, color: hintColor)),
       style: TextStyle(
           color: textColor, fontFamily: "Poppins", fontWeight: FontWeight.w500),

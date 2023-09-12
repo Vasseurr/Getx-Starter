@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
   Column buttons(BuildContext context) {
     return Column(
       children: [
-        CustomBttn(
+        CustomButton(
             buttonText: "LOGIN",
             fontSize: 16,
             buttonColor: Colors.white,
@@ -103,23 +103,23 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
+                    backgroundColor: Colors.white,
                     child: InkWell(
                       onTap: () {},
                       child: const FaIcon(
                         FontAwesomeIcons.facebookF,
                         color: Colors.blue,
                       ),
-                    ), // Icon widget changed with FaIcon
-                    backgroundColor: Colors.white),
+                    )),
                 spacer(context, 0.1, 2),
                 CircleAvatar(
+                    backgroundColor: Colors.white,
                     child: InkWell(
                       onTap: () {},
                       child: const FaIcon(
                         FontAwesomeIcons.google,
                       ),
-                    ), // Icon widget changed with FaIcon
-                    backgroundColor: Colors.white),
+                    )),
               ],
             ))
       ],
@@ -192,7 +192,7 @@ class _LoginPageState extends State<LoginPage> {
           radius: 8,
           borderColor: Colors.white12,
           borderWidth: 0.5,
-          obsecureText: true,
+          obscureText: true,
           hintText: "******",
           textInputAction: TextInputAction.done,
         )

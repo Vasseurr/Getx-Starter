@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class PreferencesManager {
   late SharedPreferences _preferences;
 
-  static PreferencesManager _instance = PreferencesManager._init();
+  static final PreferencesManager _instance = PreferencesManager._init();
 
   static PreferencesManager get instance => _instance;
 

@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import '../../../core/components/buttons/vasseurr_button.dart';
 import '../../../core/components/text/vasseurr_text_form_field.dart';
@@ -60,7 +62,7 @@ class LoginPage2 extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .apply(bodyColor: Colors.black, fontSizeFactor: 1.25)
-                .headline5));
+                .headlineSmall));
   }
 
   Form _form(BuildContext context) {
@@ -97,7 +99,7 @@ class LoginPage2 extends StatelessWidget {
               hintText: "Password",
               filled: true,
               textInputAction: TextInputAction.done,
-              obsecureText: true,
+              obscureText: true,
             ),
             SizedBox(height: context.getHeight * 0.02),
             VasseurrBttn(
@@ -106,7 +108,7 @@ class LoginPage2 extends StatelessWidget {
                 borderColor: green,
                 borderRadius: 8,
                 buttonText: "Sign In",
-                onpressed: () {}),
+                onPressed: () {}),
             SizedBox(height: context.getHeight * 0.02),
             Text("Forgot Password?", style: TextStyle(color: green))
           ]),

@@ -22,7 +22,7 @@ class SecondPage extends StatelessWidget {
               // child: Text(homeController.getFromHiveManager()),
             ),
             const Spacer(),
-            CustomBttn(
+            CustomButton(
                 buttonText: "Change value",
                 onPressed: () {
                   homeController.changeValue();

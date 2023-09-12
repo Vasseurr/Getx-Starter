@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 class AppConstants {
   //static String API_URL = "http://10.0.3.2:8081/";
 

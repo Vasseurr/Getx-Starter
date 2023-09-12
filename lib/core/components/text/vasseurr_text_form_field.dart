@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 class VasseurrTFF extends StatelessWidget {
@@ -24,7 +26,7 @@ class VasseurrTFF extends StatelessWidget {
   double? borderWidth;
   bool? filled;
   bool? autoFocus;
-  bool? obsecureText;
+  bool? obscureText;
   TextEditingController? textEditingController;
   Function(String)? onChanged;
   Function(String? value)? onSaved;
@@ -57,7 +59,7 @@ class VasseurrTFF extends StatelessWidget {
       this.borderWidth,
       this.filled,
       this.autoFocus,
-      this.obsecureText,
+      this.obscureText,
       this.prefixIcon,
       this.suffixIcon})
       : super(key: key);
@@ -74,7 +76,7 @@ class VasseurrTFF extends StatelessWidget {
         focusNode: focusNode,
         autofocus: autoFocus ?? false,
         onChanged: onChanged,
-        obscureText: obsecureText ?? false,
+        obscureText: obscureText ?? false,
         textInputAction: textInputAction ?? TextInputAction.next,
         keyboardType: textInputType ?? TextInputType.text,
         cursorColor: cursorColor ?? Colors.orangeAccent.shade400,
@@ -107,7 +109,7 @@ class VasseurrTFF extends StatelessWidget {
             fontFamily: "Poppins",
             fontWeight: FontWeight.w700,
           ),
-          hintStyle: Theme.of(context).textTheme.caption?.copyWith(
+          hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
               fontSize: 15,
               fontWeight: FontWeight.w600,
               color: hintTextColor ?? Colors.grey),

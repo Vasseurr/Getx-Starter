@@ -5,13 +5,8 @@ import 'package:get/get.dart' hide Trans;
 import 'package:getx_starter/core/components/buttons/vasseurr_button.dart';
 import 'package:getx_starter/core/components/widgets/custom_appbar.dart';
 import 'package:getx_starter/home/ui/search_page.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sizer/sizer.dart';
 import '../../core/components/buttons/custom_button.dart';
-import '../../core/components/buttons/facebook_button.dart';
-import '../../core/components/buttons/google_button.dart';
 import '../../core/components/utils/utils.dart';
-import '../../core/constants/colors.dart';
 import '../../core/constants/hive_keys.dart';
 import '../../core/init/cache/hive_manager.dart';
 import '../../core/init/lang/locale_keys.g.dart';
@@ -50,7 +45,7 @@ class HomePage extends GetView<HomeController> {
                       _.saveUser();
                     }),
                 const Spacer(),*/
-                CustomBttn(
+                CustomButton(
                     buttonText: LocaleKeys.button_save.tr(),
                     onPressed: () async {
                       _.saveUser();
@@ -60,7 +55,7 @@ class HomePage extends GetView<HomeController> {
                               " ");
                     }),
                 const Spacer(),
-                CustomBttn(
+                CustomButton(
                     height: context.height * 0.05,
                     width: context.width * 0.4,
                     radius: 15,
@@ -72,7 +67,7 @@ class HomePage extends GetView<HomeController> {
                     buttonWidth: context.getWidth * 0.5,
                     buttonHeight: context.getHeight * 0.05,
                     buttonText: "Search Page",
-                    onpressed: (() =>
+                    onPressed: (() =>
                         NavigationRoute.instance.to(() => SearchPage()))),
               ],
             );

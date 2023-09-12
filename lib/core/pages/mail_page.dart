@@ -58,7 +58,7 @@ class _MailPageState extends State<MailPage> {
                     maxLength: 250,
                   ),
                   SizedBox(height: context.getHeight * 0.03),
-                  CustomBttn(
+                  CustomButton(
                       width: context.getWidth * 0.9,
                       height: context.getHeight * 0.06,
                       buttonText: "Submit",

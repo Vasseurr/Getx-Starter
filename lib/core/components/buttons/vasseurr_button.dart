@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:getx_starter/core/constants/colors.dart';
 
@@ -10,7 +12,7 @@ class VasseurrBttn extends StatelessWidget {
   Color? borderColor;
   Color? textColor;
   Color? buttonSplashColor;
-  Function() onpressed;
+  Function() onPressed;
 
   VasseurrBttn(
       {Key? key,
@@ -22,7 +24,7 @@ class VasseurrBttn extends StatelessWidget {
       this.borderColor,
       this.textColor,
       this.buttonSplashColor,
-      required this.onpressed})
+      required this.onPressed})
       : super(key: key);
 
   @override
@@ -32,19 +34,19 @@ class VasseurrBttn extends StatelessWidget {
         side: BorderSide(color: borderColor ?? Colors.white),
         borderRadius: BorderRadius.circular(borderRadius ?? 20),
       ),
-      onPressed: onpressed,
+      onPressed: onPressed,
       constraints:
           BoxConstraints.tight(Size(buttonWidth ?? 250, buttonHeight ?? 50)),
+      elevation: 10,
+      fillColor: buttonColor ?? MyColors.mainButtonColor,
+      splashColor: buttonSplashColor ?? Colors.white,
       child: Text(
         buttonText,
         style: Theme.of(context)
             .textTheme
             .apply(bodyColor: textColor ?? Colors.white)
-            .headline6,
+            .titleLarge,
       ),
-      elevation: 10,
-      fillColor: buttonColor ?? MyColors.mainButtonColor,
-      splashColor: buttonSplashColor ?? Colors.white,
     );
   }
 }

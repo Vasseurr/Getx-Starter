@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-class CustomBttn extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final String buttonText;
   final Color buttonColor;
   final Color borderColor;
@@ -16,7 +16,7 @@ class CustomBttn extends StatelessWidget {
   final FontWeight fontWeight;
   final double fontSize;
 
-  const CustomBttn(
+  const CustomButton(
       {Key? key,
       required this.buttonText,
       this.buttonColor = Colors.blue,
@@ -30,8 +30,7 @@ class CustomBttn extends StatelessWidget {
       this.color = Colors.blue,
       this.fontWeight = FontWeight.w500,
       this.fontSize = 12})
-      : assert(onPressed != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +47,7 @@ class CustomBttn extends StatelessWidget {
             borderRadius: BorderRadius.circular(radius),
           ),
           fillColor: buttonColor,
+          onPressed: onPressed,
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -66,7 +66,6 @@ class CustomBttn extends StatelessWidget {
               ),
             ],
           ),
-          onPressed: onPressed,
         ),
       ),
     );

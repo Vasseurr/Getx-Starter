@@ -1,16 +1,18 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class DiamondButton extends StatelessWidget {
   Color buttonColor, splashColor;
   Icon? icon;
-  Function() onpressed;
+  Function() onPressed;
   DiamondButton(
       {Key? key,
       required this.buttonColor,
       this.splashColor = Colors.blueAccent,
       this.icon,
-      required this.onpressed})
+      required this.onPressed})
       : super(key: key);
 
   @override
@@ -27,7 +29,7 @@ class DiamondButton extends StatelessWidget {
           color: buttonColor,
           child: InkWell(
             splashColor: splashColor,
-            onTap: onpressed,
+            onTap: onPressed,
             child: Center(
               child: Transform(
                   alignment: Alignment.center,

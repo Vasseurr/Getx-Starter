@@ -71,7 +71,7 @@ class RegisterPage2 extends StatelessWidget {
               hintText: "vasseurr",
               filled: true,
               textInputAction: TextInputAction.done,
-              obsecureText: true,
+              obscureText: true,
             ),
             SizedBox(height: context.getHeight * 0.05),
             VasseurrBttn(
@@ -80,7 +80,7 @@ class RegisterPage2 extends StatelessWidget {
                 borderColor: Colors.redAccent.shade400,
                 borderRadius: 8,
                 buttonText: "Create Account",
-                onpressed: () {})
+                onPressed: () {})
           ]),
         ),
       ),

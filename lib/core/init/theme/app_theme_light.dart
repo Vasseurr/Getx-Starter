@@ -16,16 +16,15 @@ class AppThemeLight extends AppTheme with ILightTheme {
   AppThemeLight._init();
 
   // ThemeData get theme => redTheme;
+  @override
   ThemeData get theme => ThemeData(
         primaryColor: _appColorScheme().primary,
         fontFamily: AppConstants.FONT_FAMILY,
         colorScheme: _appColorScheme(),
         textTheme: textTheme(),
-        backgroundColor: ColorSchemeLight.instance.colorSolidBlack,
         canvasColor: Colors.transparent,
         appBarTheme: _appBarTheme(),
         scaffoldBackgroundColor: ColorSchemeLight.instance.colorSolidBlack,
-        buttonColor: ColorSchemeLight.instance.colorBlue,
         iconTheme: IconThemeData(color: ColorSchemeLight.instance.colorWhite)
             .copyWith(),
         floatingActionButtonTheme:
@@ -35,17 +34,15 @@ class AppThemeLight extends AppTheme with ILightTheme {
 
   TextTheme textTheme() {
     return TextTheme(
-        headline1: textThemeLight.headline1,
-        headline2: textThemeLight.headline2,
-        overline: textThemeLight.headline3);
+        displayLarge: textThemeLight.headline1,
+        displayMedium: textThemeLight.headline2,
+        labelSmall: textThemeLight.headline3);
   }
 
   ColorScheme _appColorScheme() {
     return ColorScheme(
         primary: colorSchemeLight.colorBlue,
-        primaryVariant: colorSchemeLight.colorWhite,
         secondary: colorSchemeLight.colorBlack,
-        secondaryVariant: colorSchemeLight.colorSolidBlack,
         surface: Colors.white,
         background: colorSchemeLight.colorBlue,
         onPrimary: Colors.blue.shade300,

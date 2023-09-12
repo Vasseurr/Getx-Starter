@@ -107,7 +107,7 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   button(String text, BuildContext context) {
-    return CustomBttn(
+    return CustomButton(
         width: MediaQuery.of(context).size.width * 0.8,
         radius: 20,
         fontWeight: FontWeight.bold,
@@ -138,7 +138,7 @@ class _RegisterPageState extends State<RegisterPage> {
         keyboardType: hintText != "Phone Number"
             ? TextInputType.text
             : TextInputType.number,
-        obsecureText: hintText != "Password" ? false : true,
+        obscureText: hintText != "Password" ? false : true,
       ),
     );
   }

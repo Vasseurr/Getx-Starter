@@ -5,7 +5,7 @@ import '../../home/service/home_service.dart';
 class HomeRepository with HomeServiceBase {
   final HomeService _homeService;
 
-  HomeRepository(this._homeService) : assert(_homeService != null);
+  HomeRepository(this._homeService);
 
   @override
   Future<User> getUser() async {
